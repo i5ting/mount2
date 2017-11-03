@@ -22,8 +22,8 @@
     "url": "git+https://github.com/i5ting/mount2.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "i5ting",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/i5ting/mount2/issues"
   },
