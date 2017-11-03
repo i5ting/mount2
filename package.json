@@ -1,7 +1,7 @@
 {
   "name": "mount2",
   "version": "1.0.0",
-  "description": "```shell $ tree . -L 3 ├── src │   ├── detail │   │   ├── api │   │   ├── index.html │   │   └── router.js │   └── index │       ├── api │       ├── index.html │       └── router.js ...... ```",
+  "description": "simple mount",
   "main": "index.js",
   "dependencies": {
     "debug": "^3.1.0",
