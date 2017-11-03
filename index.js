@@ -1,6 +1,7 @@
-var fs = require('fs')
-var path = require('path')
-var dirw = require('dirw')
+const fs = require('fs')
+const path = require('path')
+const dirw = require('dirw')
+const debug = require('debug')('mount2')
 
 module.exports = function (app, opts) {
     dirw.dir('./src', function (dir_path, dir_name) {
@@ -11,15 +12,14 @@ module.exports = function (app, opts) {
         let file = dir_path + '/router.js'
         fs.exists(file, (exists) => {
             if (exists) {
-                console.log(exists ? 'it\'s there' : 'no exist!')
-                console.log(dir_path)
-                console.log(dir_name)
+                debug(exists ? 'it\'s there' : 'no exist!')
+                debug(dir_path)
+                debug(dir_name)
                 const r = require(file)
                 app.use(r.routes(), r.allowedMethods())
             } else {
-                console.log(file + 'not exist')
+                debug(file + 'not exist')
             }
-            
         })
     })
 }
