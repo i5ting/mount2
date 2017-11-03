@@ -1,0 +1,31 @@
+{
+  "name": "mount2",
+  "version": "1.0.0",
+  "description": "```shell $ tree . -L 3 ├── src │   ├── detail │   │   ├── api │   │   ├── index.html │   │   └── router.js │   └── index │       ├── api │       ├── index.html │       └── router.js ...... ```",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "^3.1.0",
+    "dirw": "^1.0.3",
+    "koa-router": "^7.2.1"
+  },
+  "devDependencies": {
+    "art-template": "^4.12.2",
+    "koa": "^2.3.0",
+    "koa-art-template": "^1.1.1",
+    "koa-static": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/mount2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/mount2/issues"
+  },
+  "homepage": "https://github.com/i5ting/mount2#readme"
+}
