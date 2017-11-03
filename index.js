@@ -17,7 +17,8 @@ module.exports = function (app, folder, opts) {
                 debug(exists ? 'it\'s there' : 'no exist!')
                 debug(dir_path)
                 debug(dir_name)
-                const r = require(file)
+                let r = require(file)
+                'index' === dir_name ? '' : r.prefix('/' + dir_name)
                 app.use(r.routes(), r.allowedMethods())
             } else {
                 debug(file + 'not exist')
