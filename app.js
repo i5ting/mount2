@@ -9,10 +9,6 @@ global.home = __dirname;
  
 app.use(require('koa-static')(__dirname + '/public'))
 
-// routes
-app.use(index.routes(), index.allowedMethods())
-app.use(users.routes(), users.allowedMethods())
-
 // error-handling
 app.on('error', (err, ctx) => {
   console.error('server error', err, ctx)
@@ -26,5 +22,9 @@ render(app, {
   debug: process.env.NODE_ENV !== 'production'
 });
 
+// routes 
+const mount = require('.')
+mount(app, {})
+
+
 app.listen(3001)
-module.exports = app
