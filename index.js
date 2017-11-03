@@ -3,8 +3,10 @@ const path = require('path')
 const dirw = require('dirw')
 const debug = require('debug')('mount2')
 
-module.exports = function (app, opts) {
-    dirw.dir('./src', function (dir_path, dir_name) {
+module.exports = function (app, folder, opts) {
+    if (!folder) folder = './src'
+
+    dirw.dir(folder, function (dir_path, dir_name) {
         if (dir_name == 'bin' || dir_name == '.bin') {
             return
         }

@@ -24,7 +24,7 @@ render(app, {
 
 // routes 
 const mount = require('.')
-mount(app, {})
+mount(app)
 
 
 app.listen(3001)
