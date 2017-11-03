@@ -1,8 +1,7 @@
 const router = require('koa-router')()
 
 router.get('/', async (ctx, next) => {
-  await ctx.render(home + '/src/index/index', {
-    '@': home,
+  await ctx.render('src/index/index', {
     title: 'Hello Koa 2!'
   })
 })
