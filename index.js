@@ -1,7 +1,7 @@
 var path = require('path');
 var dirw = require('dirw');
 
-dirw.dir('.', function(dir_path, dir_name){
+dirw.dir('./src', function(dir_path, dir_name){
   if(dir_name == 'bin' || dir_name == '.bin'){
     return;
   }
