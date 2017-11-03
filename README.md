@@ -1,24 +1,29 @@
+# mount2
 
-
-
+## 约定目录
 
 ```shell
 $ tree . -L 3
 ├── src
 │   ├── detail
-│   │   ├── api
-│   │   ├── index.html
+│   │   ├── index.art
 │   │   └── router.js
 │   └── index
-│       ├── api
-│       ├── index.html
+│       ├── index.art
 │       └── router.js
 ......
 ```
 
+## 安装
 
+```
+$ npm i -S mount2
+```
 
+## 用法
 
-res.render
-
-通过apply，注入当前地址。
+```
+// routes 
+const mount = require('mount2')
+mount(app, {})
+```
